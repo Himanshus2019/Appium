@@ -8,31 +8,22 @@ import io.appium.java_client.AppiumBy;
 public class EuropeB extends BaseTest{
 	
 	
-	@Test
+	@Test(priority=1)
 	public void signUp() throws InterruptedException 
 	
 	{
-//		for(int i=0; i<2; i++)
-//		{
-//			Alert permissionAlert = driver.switchTo().alert();
-//			permissionAlert.accept();
-//
-//		}
-
-		driver.findElement(By.xpath("//XCUIElementTypeButton[@name=\"Yes\"]")).click();
 		
 		driver.findElement(By.xpath("//XCUIElementTypeTextField[@value=\"*Full Name\"]")).sendKeys("Testing Name");
-		driver.findElement(By.xpath("//XCUIElementTypeTextField[@value=\"*Mobile Number\"]")).sendKeys("7750445150");
+		driver.findElement(By.xpath("//XCUIElementTypeTextField[@value=\"*Mobile Number\"]")).sendKeys("7400045150");
 		driver.findElement(By.xpath("//XCUIElementTypeTextField[@value=\"*City\"]")).sendKeys("Lucknow");
-		
 		driver.findElement(AppiumBy.accessibilityId("Done")).click();
 		
 		driver.findElement(By.xpath("(//XCUIElementTypeButton[@name=\"ic uncheck\"])[2]")).click();
 		driver.findElement(By.xpath("(//XCUIElementTypeButton[@name=\"ic uncheck\"])[1]")).click();
-		
 		driver.findElement(By.xpath("//XCUIElementTypeButton[@name=\"SUBMIT\"]")).click();
 		
-		Thread.sleep(6000);
+		Thread.sleep(9000);
+		
 		driver.findElement(By.xpath("//XCUIElementTypeKey[@name=\"8\"]")).click();
 		driver.findElement(By.xpath("//XCUIElementTypeKey[@name=\"4\"]")).click();
 		driver.findElement(By.xpath("//XCUIElementTypeKey[@name=\"2\"]")).click();
@@ -41,10 +32,22 @@ public class EuropeB extends BaseTest{
 		driver.findElement(By.xpath("//XCUIElementTypeKey[@name=\"1\"]")).click();
 		driver.findElement(By.xpath("//XCUIElementTypeButton[@name=\"SUBMIT\"]")).click();
 		
+		Thread.sleep(8000);
 		
-//		Thread.sleep(400);
-//		driver.findElement(AppiumBy.iOSClassChain("**/XCUIElementTypeStaticText[`name == \"Add a vehicle\"`]")).click();
 
+	}
+	
+    @Test(priority=2)
+	
+	public void addingRE () 
+
+{
+    	driver.findElement(AppiumBy.iOSClassChain(
+				"**/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeScrollView/XCUIElementTypeOther[1]/XCUIElementTypeTable/XCUIElementTypeCell[1]/XCUIElementTypeOther"))
+				.click();
+	    driver.findElement(AppiumBy.iOSClassChain(
+			"**/XCUIElementTypeButton[`name == 'ADD VEHICLE'`]"))
+			.click();
 	}
 	
 }

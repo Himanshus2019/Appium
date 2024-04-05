@@ -55,25 +55,24 @@ public void EuropeBasicTest() throws InterruptedException
 		Thread.sleep(2000);
 		driver.switchTo().alert().dismiss();
 	
-//		driver.switchTo().alert().dismiss();
 		driver.findElement(AppiumBy.accessibilityId("ic next")).click();
 		driver.findElement(By.xpath("//XCUIElementTypeStaticText[@name=\"LOGIN\"]")).click();
 		driver.findElement(AppiumBy.accessibilityId("ic down arrow")).click();
 		driver.findElement(AppiumBy.accessibilityId("Germany-Eng")).click();
-		driver.findElement(AppiumBy.accessibilityId("mobileNumber")).sendKeys("Himanshu11@mailinator.com");
+		driver.findElement(AppiumBy.accessibilityId("mobileNumber")).sendKeys("Himanshu0401@mailinator.com");
 		driver.findElement(By.xpath("//XCUIElementTypeStaticText[@name=\"CONTINUE\"]")).click();
-		driver.findElement(By.xpath("//XCUIElementTypeButton[@name=\"Yes\"]")).click();
-		
+		driver.findElement(By.xpath("//XCUIElementTypeButton[@name=\"Yes\"]")).click();    // (For New Signup)
+		Thread.sleep(8000);
 
-		Thread.sleep(6000);
-		driver.findElement(By.xpath("//XCUIElementTypeKey[@name=\"8\"]")).click();
-		driver.findElement(By.xpath("//XCUIElementTypeKey[@name=\"4\"]")).click();
-		driver.findElement(By.xpath("//XCUIElementTypeKey[@name=\"2\"]")).click();
-		driver.findElement(By.xpath("//XCUIElementTypeKey[@name=\"6\"]")).click();
-		driver.findElement(By.xpath("//XCUIElementTypeKey[@name=\"9\"]")).click();
-		driver.findElement(By.xpath("//XCUIElementTypeKey[@name=\"1\"]")).click();
-		driver.findElement(By.xpath("//XCUIElementTypeButton[@name=\"SUBMIT\"]")).click();
-		Thread.sleep(10000);
+		
+//		driver.findElement(By.xpath("//XCUIElementTypeKey[@name=\"8\"]")).click();
+//		driver.findElement(By.xpath("//XCUIElementTypeKey[@name=\"4\"]")).click();
+//		driver.findElement(By.xpath("//XCUIElementTypeKey[@name=\"2\"]")).click();
+//		driver.findElement(By.xpath("//XCUIElementTypeKey[@name=\"6\"]")).click();
+//		driver.findElement(By.xpath("//XCUIElementTypeKey[@name=\"9\"]")).click();
+//		driver.findElement(By.xpath("//XCUIElementTypeKey[@name=\"1\"]")).click();
+//		driver.findElement(By.xpath("//XCUIElementTypeButton[@name=\"SUBMIT\"]")).click();
+//		Thread.sleep(10000);
 		
 	}
 	

@@ -3,15 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="appium.REAutomation.AddVehicle">
+      <class name="appium.REAutomation.EuropeB">
         <methods>
           <include name="EuropeBasicTest"/>
-          <include name="changeProfile"/>
-          <include name="settingRE"/>
+          <include name="addingRE"/>
           <include name="TearDown"/>
           <include name="ConfigureAppium"/>
+          <include name="signUp"/>
         </methods>
-      </class> <!-- appium.REAutomation.AddVehicle -->
+      </class> <!-- appium.REAutomation.EuropeB -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
